@@ -1,75 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Formulario</title>
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Parque Nacional Cotopaxi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
 
+    <!-- Contenedor principal centrado -->
+    <div class="container my-5">
+        <div class="card shadow-sm p-4 mx-auto" style="max-width: 650px;">
+            <h2 class="text-center text-primary fw-bold mb-4">Encuesta Parque Nacional Cotopaxi</h2>
+
+            <form>
+                <!-- Preguntas 1 y 2 (Cajas de texto) -->
+                <div class="mb-3">
+                    <label for="fname" class="form-label fw-bold">1. Nombre:</label>
+                    <input type="text" class="form-control" id="fname" name="fname">
+                </div>
+
+                <div class="mb-3">
+                    <label for="fres" class="form-label fw-bold">2. Lugar o Residencia:</label>
+                    <input type="text" class="form-control" id="fres" name="lres">
+                </div>
+
+                <!-- Pregunta 3 (Botones de radio) -->
+                <div class="mb-3">
+                    <p class="fw-bold mb-2">3. Es la primera vez que visitas el Parque Nacional Cotopaxi:</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="SI" name="tu_primera_vez" value="SI">
+                        <label class="form-check-label" for="SI">SI</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="NO" name="tu_primera_vez" value="NO">
+                        <label class="form-check-label" for="NO">NO</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 (Botones de radio) -->
+                <div class="mb-3">
+                    <p class="fw-bold mb-2">4. Cual fue el motivo de tu visita:</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="senderismo" name="motivo" value="senderismo">
+                        <label class="form-check-label" for="senderismo">Senderismo / Trekking</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="Ascenso" name="motivo" value="Ascenso">
+                        <label class="form-check-label" for="Ascenso">Ascenso a la cumbre</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="ciclismo" name="motivo" value="ciclismo">
+                        <label class="form-check-label" for="ciclismo">Ciclismo en la montaña</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 5 (Casillas de verificación) -->
+                <div class="mb-3">
+                    <p class="fw-bold mb-2">5. ¿Qué actividades realizaste durante tu estadía:</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="caminata1" name="actividad1" value="caminata1">
+                        <label class="form-check-label" for="caminata1">Caminata en la laguna</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="caminata2" name="actividad2" value="caminata2">
+                        <label class="form-check-label" for="caminata2">Caminata hacia el glaciar</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="camping" name="actividad3" value="camping">
+                        <label class="form-check-label" for="camping">Picnic o camping</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 6 (Botones de radio) -->
+                <div class="mb-3">
+                    <p class="fw-bold mb-2">6. Que medio de transporte utilizaste para llegar:</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="vehiculo" name="transporte1" value="vehiculo">
+                        <label class="form-check-label" for="vehiculo">Vehiculo privado</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="autobus" name="transporte2" value="autobus">
+                        <label class="form-check-label" for="autobus">Autobus publico</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="Turn" name="transporte3" value="Turn">
+                        <label class="form-check-label" for="Turn">Tour local</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div class="mb-3">
+                    <p class="fw-bold mb-2">7. En una escala del 1 al 3, ¿qué tan satisfecho estás con tu experiencia global?:</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="3" name="escala" value="3">
+                        <label class="form-check-label" for="3">3 (Satisfecho)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="2" name="escala2" value="2">
+                        <label class="form-check-label" for="2">2 (Regular)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="1" name="escala3" value="1">
+                        <label class="form-check-label" for="1">1 (Insatisfecho)</label>
+                    </div>
+                </div>
+
+                <!-- Preguntas 8, 9 y 10 -->
+                <div class="mb-3">
+                    <label for="exp" class="form-label fw-bold">8. Como describes tu experiencia:</label>
+                    <input type="text" class="form-control" id="exp" name="exp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="mej" class="form-label fw-bold">9. En que deberiamos mejorar:</label>
+                    <input type="text" class="form-control" id="mej" name="mej">
+                </div>
+
+                <div class="mb-3">
+                    <label for="vol" class="form-label fw-bold">10. Volverias a visitarnos y porque:</label>
+                    <input type="text" class="form-control" id="vol" name="vol">
+                </div>
+
+                <!-- Botón para enviar -->
+                <div class="d-grid gap-2 mt-4">
+                    <button type="submit" class="btn btn-primary">Enviar Encuesta</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JS de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<body>
-<form>
-1.  <label for="fname">Nombre:
-</label><br>
- <input type="text" id="fname" name="fname"><br>
- <label for="lres">2. Lugar o Residencia:</label><br>
- <input type="text" id="fres" name="lres">
-</form>
-<p>3. Es la primera vez que visitas el Parque Nacional Cotopaxi:</p>
-<form>
- <input type="radio" id="SI" name="tu_primera_vez" value="SI">
- <label for="SI">SI</label><br>
- <input type="radio" id="NO" name="tu_primera_vez" value="NO">
- <label for="NO">NO</label><br>
-</form>
-<p>4. Cual fue el motivo de tu visita:</p>
-<form>
- <input type="radio" id="senderismo" name="motivo" value="senderismo">
- <label for="senderismo">Senderismo / Trekking</label><br>
- <input type="radio" id="Ascenso" name="motivo" value="Ascenso">
- <label for="Ascenso">Ascenso a la cumbre</label><br>
- <input type="radio" id="ciclismo" name="motivo" value="ciclismo">
- <label for="ciclismo">ciclismo en la montaña</label>
-</form>
-<p>5. ¿Qué actividades realizaste durante tu estadía:</p>
-<form>
- <input type="checkbox" id="caminata1" name="actividad1" value="caminata1">
- <label for="actividad1"> caminata en la laguna</label><br>
- <input type="checkbox" id="caminata2" name="actividad2" value="caminata2">
- <label for="actividad2"> caminata hacia el glaciar</label><br>
- <input type="checkbox" id="camping" name="actividad3" value="camping">
- <label for="camping"> picknik o camping</label>
-</form>
-<p>6. Que medio de transporte utilizaste para llegar:</p>
-<form>
- <input type="radio" id="vehiculo" name="transporte1" value="vehiculo">
- <label for="vehiculo">vehiculo privado</label><br>
- <input type="radio" id="autobus" name="transporte2" value="autobus">
- <label for="autobus">Autobus publico</label><br>
- <input type="radio" id="Turn" name="transporte3" value="Turn">
- <label for="Turn">turn local</label>
-</form>
-<p>7. En una escala del 1 al 3, ¿qué tan satisfecho estás con tu experiencia
-global?:</p>
-<form>
- <input type="radio" id="3" name="escala" value="3">
- <label for="3">3(satisfecho)</label><br>
- <input type="radio" id="2" name="escala2" value="2">
- <label for="2">2(ñe alajo)</label><br>
- <input type="radio" id="1" name="escala3" value="1">
- <label for="1">1(insatisfecho)</label><br>
-</form>
-<form>
- <label for="exp">8. Como describes tu experiencia:</label><br>
- <input type="text" id="exp" name="exp"><br>
- <label for="mej">9. En que deberiamos mejorar:</label><br>
- <input type="text" id="mej" name="mej"><br>
- <label for="vol">10. Volverias a visitarnos y porque:</label><br>
- <input type="text" id="vol" name="vol">
-
-</form>
 </body>
 </html>
